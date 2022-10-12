@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/98cf4e9f2f.js" crossorigin="anonymous"></script><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="style.Css">
+        <title>Page d'acceuil</title>
+    
+    </head>
+<body>
+    <header class="HeaderBackground">
+        <nav>
+            <div class="Menu">
+                <img src="./Img/logo_rps.jpg" alt="Logo RPS">
+                <div class="Liens">
+                    <a href="index.html">Accueil</a>
+                    <a href="nos_service.html">Nos Service</a>
+                    <a href="nos_référents.html">Nos Référents</a>
+                    <a href="nous_rejoindre.html">Nous Rejoindre</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contactez-nous">
+            <h1>Contactez-nous</h1>
+            <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec nous !</p>
+            <form action="/page-traitement-donnees" method="post">
+              <div>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Martin" required>
+              </div>
+              <div>
+                <label for="email">Votre e-mail</label>
+                <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+              </div>
+              <div>
+                <label for="sujet">Pour quel métier voulez vous postulez?</label>
+                <select name="sujet" id="sujet" required>
+                    <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                    <option value="metier-conducteur">Conducteur de Travaux</option>
+                    <option value="metier-chef">Chef de chantier/Chef d'equipe</option>
+                    <option value="metier-terrassier">Terrassier</option>
+                    <option value="metier-maçon">Maçon VRD</option>
+                    <option value="metier-peleur">Pelleur</option>
+                 </select>
+              </div>
+              <div>
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" placeholder="Bonjour, je vous contacte car...." required></textarea>
+              </div>
+              <div>
+                <button type="submit">Envoyer mon message</button>
+              </div>
+            </form>
+          </div>
+    </main>
+    <footer class="Footer ">
+        <div class="MenuFooter">
+            <div><img src="./Img/logo_rps.jpg" alt="Logo RPS"></div>
+            <div>2, AV.Spinoza 77184 EMERAINVILLE</div>
+            <div><i class="Icone fas fa-solid fa-phone"></i>Tèl : 01 64 61 93 93</div>
+            <div><i class="Icone fas fa-solid fa-fax"></i>Fax : 01 64 61 93 90</div>
+            <div><a href="mailto:secretariat@rps-engineering.fr"><i class="Icone fas fa-solid fa-at"></i>Email : secretariat@rps-engineering.fr</a></div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,357 @@
+
+
+
+
+
+/******************************************************************************************************/
+                                            /***Géneral***/
+/******************************************************************************************************/
+
+body {
+    font-family : 'Raleway', sans-serif ;
+    line-height: 2;
+    background-image: url('./Img/Bâtiment\ Principal\ -\ RVB\ copie\ copie.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/******************************************************************************************************/
+                                            /***Header***/
+/******************************************************************************************************/
+.Menu {
+    display: flex;
+    align-items: center;/* Cela permet que les liens sois aligner avec le logo */
+    justify-content: space-between;   
+}
+.Liens{
+   display: flex;
+   justify-content: end;/* Pour que les liens sois tout a droite de la page internet*/
+}
+.Liens a {
+    padding: 30px;/*Afin d'espacer les liens entre eux*/
+    text-decoration: none;
+}
+.Liens a:hover  {/* Au survol de la souris un effet visuel apparaitra*/
+    color: white;
+    background-color: #5187A3;
+}
+nav img {/* Pour dimensionner la taille du logo*/
+    width:  130px;
+    height: auto;
+}
+/******************************************************************************************************/
+                                            /***Main Page d'accauil***/
+/******************************************************************************************************/
+.DisplayFlex{
+    display: flex;
+}
+.Bloc{
+    width: 50%;
+    margin: 20px;
+}
+.Bloc2{
+    width: 40%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.SectionAcceuilService{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.SectionAcceuilService img{
+    width: 270px;
+    height: 238px;
+    border-radius: 20px 20px 0 0;
+}
+.TextImg{
+    background-color: #032071 ;
+    color: white;
+    margin-top: -15px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.BackgroundImg{
+    border: solid white 1px;
+    border-radius: 20px 20px 0 0;
+}
+.Recrutement{
+    width: auto;
+    height: auto;
+}
+.Recrutement img{
+    width: 180px;
+    height: auto;
+}
+.TextRecrutement a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+/******************************************************************************************************/
+                                            /***Footers***/
+/******************************************************************************************************/
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+.MenuFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #032071;
+    color: white;
+    bottom: 0;
+    
+}
+.MenuFooter img{
+    width:  130px;
+    height: auto;
+}
+
+
+/******************************************************************************************************/
+                                            /***Page Nos Service***/
+/******************************************************************************************************/
+.BanniereNosService{
+    border: solid grey 1px ;
+    padding: 15px;
+}
+.BanniereNosService:hover{
+    color: white;
+    background-color: #5187A3;
+}
+.Icone{
+    color: #3EBAE2;
+    width: 30px;
+    font-size: x-large;
+}
+h2{
+    color: #1E6085;
+}
+.RowReverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ServiceCenter {
+    text-align: center;
+    color: black;
+}
+/* Pour faire la forme de l'hexagone */
+.hexagone {
+    position: relative;
+    /* Pour rendre responsive mettre width à 100% */;
+    width: 350.20508px;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+    filter : drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+  }
+  .hexagone:after {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    content: "";
+    display: block;
+    margin-top: 28.86751%;
+    padding-bottom: 86.602%;
+  }
+  .hexagone .hexagonemain{
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 115.47005%;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+    -ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+    transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+    z-index: 1;
+  }
+  .hexagone .hexagonemainbefore{
+    content: "";
+    display: block;
+    position: absolute;
+    visibility: visible;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+    -ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+    transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+  }
+  .hexagone .hexagonecontent{
+    overflow-y: auto;
+    width: 100%;
+    display: block;
+    position: absolute;
+    visibility: visible;
+    bottom: 25%;
+    top: 25%;
+    left: 0;
+    z-index: 3;
+  }
+  .hexagone img{
+    left: -100%;
+    right: -100%;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-transform: rotate3d(0,0,0,0deg);
+    -ms-transform: rotate3d(0,0,0,0deg);
+    transform: rotate3d(0,0,0,0deg);
+  }
+
+  /******************************************************************************************************/
+                                            /***Page Nos Référents***/
+/******************************************************************************************************/
+.Between{
+    display: flex;
+    justify-content: space-around;
+}
+.Between img{
+    margin: 10px;
+}
+.TextReference{
+    text-align: center;
+    color: rgb(27, 26, 26);
+    font-weight: 800;
+}
+/******************************************************************************************************/
+                                            /***Page Nous Rejoindre***/
+/******************************************************************************************************/
+main {
+    text-align: center;
+}
+.Caroussel img{
+    width: 500px;
+    height: 400px;
+    
+}
+.Recrutement{
+    color: white;
+    font-weight: 900;
+    background-color: red;
+    border-radius: 15%;
+    width: 220px;
+    height: 150px;
+    margin: 15px;   
+}
+.Recrutement a {
+    text-decoration: none;
+    color: white;
+}
+.RejoindreMain{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.Cliquez_ici{
+    text-decoration: underline;
+}
+
+
+/******************************************************************************************************/
+                                            /***Page Formulaire_Recrutement***/
+/******************************************************************************************************/
+.contactez-nous {
+    width: 700px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 0 50px 0 50px;
+    background: white;
+  }
+  
+  .contactez-nous > h1 {
+    font-weight: 500;
+  }
+  
+  .contactez-nous > p {
+    font-weight: 300;
+  }
+  
+  form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
+    margin-top: 25px;
+  }
+  
+  form div > label {
+    margin-bottom: 7px;
+    font-weight: 600;
+  }
+  
+  form div > input, form div > select, form div > textarea {
+    background: #FFD9D9;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Montserrat, "sans-serif";
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+  }
+  
+  form div > input, form div > select {
+    height: 50px;
+    padding-left: 10px;
+  }
+  
+  form div > select {
+    appearance: none;
+    background-size: 15px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDIxMy4zMzMgMjEzLjMzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cG9seWdvbiBwb2ludHM9IjAsNTMuMzMzIDEwNi42NjcsMTYwIDIxMy4zMzMsNTMuMzMzICAgIiBmaWxsPSIjMzAzMDMwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BvbHlnb24+Cgk8L2c+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==');
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+  }
+  
+  form div > textarea {
+    height: 195px;
+    padding: 15px 0px 0px 10px;
+  }
+  
+  form div > input::placeholder, form div > textarea::placeholder {
+    color: white;
+  }
+  
+  form div > select:invalid {
+    color: white;
+  }
+  
+  form div > select option {
+    background: white;
+    color: #303030;
+  }
+  
+  form div:last-child {
+    align-items:center;
+    margin-top: 20px;
+  }
+  
+  form button {
+    width: 450px;
+    max-width: 500px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 28px;
+    background: white;
+    border: rgba(48, 48, 48, 0.5) solid 1px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    color: #303030;
+  }
