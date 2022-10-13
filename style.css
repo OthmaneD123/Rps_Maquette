@@ -64,6 +64,12 @@ h1{
     display: flex;
     justify-content: center;
 }
+.TextAccueil{
+  text-align: left;
+  font-weight: bolder;
+  color: white; text-shadow: black 0.1em 0.1em 0.2em
+}
+
 .SectionAcceuilService{
     display: flex;
     flex-wrap: wrap;
@@ -82,13 +88,9 @@ h1{
     text-transform: uppercase;
     font-weight: 600;
 }
-.BackgroundImg{
-    border: solid white 1px;
-    border-radius: 20px 20px 0 0;
-}
+
 .Recrutement{
-    width: auto;
-    height: auto;
+    display: contents;
 }
 .Recrutement img{
     width: 180px;
@@ -98,6 +100,9 @@ h1{
     color: white;
     text-decoration: none;
     font-weight: 600;
+}
+.DisplayFlex  h2{
+    color: red;
 }
 /******************************************************************************************************/
                                             /***Footers***/
@@ -133,10 +138,9 @@ footer a {
     color: white;
     background-color: #5187A3;
 }
-.Icone{
-    color: #3EBAE2;
-    width: 30px;
-    font-size: x-large;
+.TextService{
+  color: white; text-shadow: black 0.1em 0.1em 0.2em;
+  font-weight: 700;
 }
 h2{
     color: #1E6085;
@@ -242,15 +246,6 @@ main {
     height: 400px;
     
 }
-.Recrutement{
-    color: white;
-    font-weight: 900;
-    background-color: red;
-    border-radius: 15%;
-    width: 220px;
-    height: 150px;
-    margin: 15px;   
-}
 .Recrutement a {
     text-decoration: none;
     color: white;
@@ -260,16 +255,29 @@ main {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.BackgroundImgRecrutement{
+  border: solid white 1px;
+  border-radius: 20px ;
+  background-color: red;
+  width: 250px;
+  margin: 10px;
+  font-weight: 900;
+}
 .Cliquez_ici{
     text-decoration: underline;
+    padding: 19px;
 }
 
 
 /******************************************************************************************************/
                                             /***Page Formulaire_Recrutement***/
 /******************************************************************************************************/
+.Formulaire{
+  display: flex;
+  justify-content: center;
+}
 .contactez-nous {
-    width: 700px;
+    width: 530px;
     border: 1px solid;
     border-radius: 8px;
     padding: 0 50px 0 50px;
@@ -321,7 +329,7 @@ main {
   }
   
   form div > textarea {
-    height: 195px;
+    height: 100px;
     padding: 15px 0px 0px 10px;
   }
   
