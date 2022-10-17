@@ -20,6 +20,7 @@ body {
     height: 100%;
     margin: 0 auto;
 }
+
 /******************************************************************************************************/
                                             /***Header***/
 /******************************************************************************************************/
@@ -88,6 +89,9 @@ h2{
     height: 238px;
     border-radius: 20px 20px 0 0;
 }
+.BackgroundImg{
+  margin: 10px;
+}
 .TextImg{
     background-color: #032071 ;
     color: white;
@@ -119,6 +123,7 @@ h2{
 footer a {
     color: white;
     text-decoration: none;
+
 }
 .MenuFooter{
     display: flex;
@@ -126,7 +131,7 @@ footer a {
     align-items: center;
     background-color: #032071;
     color: white;
-    bottom: 0;
+    height: 193px;
     
 }
 .MenuFooter img{
