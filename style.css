@@ -73,7 +73,7 @@ h1{
 }
 .TextAccueil{
   text-align: left;
-  font-weight: bolder;
+  font-weight: 500;
   color: white; text-shadow: black 0.1em 0.1em 0.2em
 }
 h2{
@@ -251,7 +251,10 @@ footer a {
 main {
     text-align: center;
 }
-
+.TextRh{
+  font-weight: 500;
+  color: white; text-shadow: black 0.1em 0.1em 0.2em
+}
 .Recrutement a {
     text-decoration: none;
     color: white;
