@@ -264,7 +264,7 @@ footer a {
   position: relative;
   min-height: 350px;
   perspective: 1000px;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 .testimonials .item {
   width: 450px;
@@ -279,6 +279,7 @@ footer a {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   user-select: none;
   cursor: pointer;
+  overflow: auto !important;
 }
 .testimonials .item img {
   width: 100px;
