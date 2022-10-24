@@ -24,10 +24,14 @@ body {
 /******************************************************************************************************/
                                             /***Header***/
 /******************************************************************************************************/
+.HeaderBackground nav {
+  
+}
 .Menu {
     display: flex;
     align-items: center;/* Cela permet que les liens sois aligner avec le logo */
-    justify-content: space-between;   
+    justify-content: space-between;
+    ;/* Pour que l'on puisse cliquer ur les images et es liens cliquables par dessus le slide */
 }
 .Liens{
    display: flex;
@@ -115,6 +119,134 @@ h2{
 }
 .DisplayFlex  h2{
     color: red;
+}
+
+/**************  Debut  Slide Page d'Acceuil            ************************************************/
+body .SlideAcceuil {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
+}
+.sr-only {
+  position: absolute;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: transparent;
+}
+
+input {
+  position: absolute;  
+  opacity: 0;
+  /*margin-top: 40vh;*/
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+  /*width: 12px;
+  height: 12px;*/
+  border: solid 2px white;
+  border-radius: 999px;
+  background-color: transparent;
+  margin: 15vh 6px 0 6px;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: .4s;
+  box-shadow: 0 0 20px 0 #000;
+}
+
+input:checked + label{
+  background-color: white;
+}
+
+input + label::after{
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' style='fill:white'%3E%3Cpath d='M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 55%;
+  background-size: 80px 80px;
+  line-height: 100vh;
+  transition: background-size 200ms;
+  position: absolute;
+  color: white;
+  height: calc(15vh - -500px);
+  width: 80px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+input + label:hover::after {
+  background-size: 40px 40px;
+}
+
+input:checked + label::after {
+  background-image: none;
+  width: 40vw;
+  left: 0;
+  z-index: 10;
+}
+
+input:checked + label + .slide ~ input + label::after {
+  display: none;
+}
+
+input:checked + label + .slide + input + label::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' width='100' fill='white'%3E%3Cpath d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z' /%3E%3C/svg%3E");
+  display: block;
+  width: 80px;
+  right: 0;
+  left: auto;
+}
+
+input:focus + label{
+  box-shadow: 0 0 0 2px teal, 0 0 18px white;
+}
+
+.slide {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 680px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition-duration: .4s;
+  opacity: 1;
+}
+
+input:checked ~ .slide {
+  transform: translateX(100%);
+}
+
+input:checked + label + .slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.bg1{
+  background-image: url(./Img/IMG_8490.JPG);
+}
+.bg2{
+  background-image: url(./Img/chantier\ RPS\ -\ RTE\ -\ 1.jpg);
+}
+.bg3{
+  background-image: url(./Img/IMG_8527.JPG);
+}
+.bg4{
+  background-image: url(./Img/IMG_8624.JPG);
+}
+.bg5{
+  background-image: url(./Img/IMG_0421.JPG);
 }
 /******************************************************************************************************/
                                             /***Footers***/
@@ -231,7 +363,7 @@ footer a {
   }
 
   /******************************************************************************************************/
-                                            /***Page Nos Référents***/
+                                            /***Page Nos Références***/
 /******************************************************************************************************/
 .Between{
     display: flex;
@@ -248,9 +380,7 @@ footer a {
 /******************************************************************************************************/
                                             /***Page Nous Rejoindre***/
 /******************************************************************************************************/
-.TextSlide{
-  overflow-y: scroll;
-}
+/********Parti pour creation Slide ************/
 .slider {
   width: 100%;
 }
@@ -270,7 +400,7 @@ footer a {
   width: 450px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #0A0220;
+  background-color: #032071;
   position: absolute;
   top: 0;
   box-sizing: border-box;
@@ -281,6 +411,7 @@ footer a {
   cursor: pointer;
   overflow: auto !important;
 }
+
 .testimonials .item img {
   width: 100px;
   height: 100px;
@@ -304,7 +435,7 @@ footer a {
   width: 5px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #413B52;
+  /*background-color: #413B52;*/
   margin: 7px;
   transition-duration: 0.2s;
 }
@@ -366,7 +497,7 @@ footer a {
 #t-5:checked ~ .testimonials label[for="t-5"] {
   z-index: 4;
 }
-
+/*** Fin de la parti création de Slide *****/
 main {
     text-align: center;
 }

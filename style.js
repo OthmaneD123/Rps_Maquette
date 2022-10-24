@@ -1,58 +1,57 @@
-let slideIndex = 0;
-showSlides();
 
-// Next-previous control
-function nextSlide() {
-  slideIndex++;
-  showSlides();
-  timer = _timer; // reset timer
-}
+var interleaveOffset = 0.5;
 
-function prevSlide() {
-  slideIndex--;
-  showSlides();
-  timer = _timer;
-}
-
-// Thumbnail image controlls
-function currentSlide(n) {
-  slideIndex = n - 1;
-  showSlides();
-  timer = _timer;
-}
-
-function showSlides() {
-  let slides = document.querySelectorAll(".mySlides");
-  let dots = document.querySelectorAll(".dots");
-
-  if (slideIndex > slides.length - 1) slideIndex = 0;
-  if (slideIndex < 0) slideIndex = slides.length - 1;
-  
-  // hide all slides
-  slides.forEach((slide) => {
-    slide.style.display = "none";
-  });
-  
-  // show one slide base on index number
-  slides[slideIndex].style.display = "block";
-  
-  dots.forEach((dot) => {
-    dot.classList.remove("active");
-  });
-  
-  dots[slideIndex].classList.add("active");
-}
-
-// autoplay slides --------
-let timer = 7; // sec
-const _timer = timer;
-
-// this function runs every 1 second
-setInterval(() => {
-  timer--;
-
-  if (timer < 1) {
-    nextSlide();
-    timer = _timer; // reset timer
+var swiperOptions = {
+  loop: true,
+  speed: 1000,
+  grabCursor: true,
+  watchSlidesProgress: true,
+  mousewheelControl: true,
+  keyboardControl: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  on: {
+    progress: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        var slideProgress = swiper.slides[i].progress;
+        var innerOffset = swiper.width * interleaveOffset;
+        var innerTranslate = slideProgress * innerOffset;
+        swiper.slides[i].querySelector(".slide-inner").style.transform =
+          "translate3d(" + innerTranslate + "px, 0, 0)";
+      }      
+    },
+    touchStart: function() {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = "";
+      }
+    },
+    setTransition: function(speed) {
+      var swiper = this;
+      for (var i = 0; i < swiper.slides.length; i++) {
+        swiper.slides[i].style.transition = speed + "ms";
+        swiper.slides[i].querySelector(".slide-inner").style.transition =
+          speed + "ms";
+      }
+    }
   }
-}, 1000); // 1sec
+};
+
+var swiper = new Swiper(".swiper-container", swiperOptions);
+
+// document.querySelector('[data-toggle]').addEventListener('click', function(){
+//   if (swiper.realIndex == 0) {
+//     swiper.slideTo(swiper.slides.length - 1);
+//   } else {
+//     swiper.slideTo(0);
+//   }
+// });
+
+// function logIndex () {
+//   requestAnimationFrame(logIndex);
+//   console.log(swiper.realIndex);
+// }
+// logIndex();
